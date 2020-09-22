@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TabbedVp2</string>
+    <string name="click_me_to_select_fragment_pos_10_k">Click me to Select Fragment Pos 10 (K)</string>
 </resources>

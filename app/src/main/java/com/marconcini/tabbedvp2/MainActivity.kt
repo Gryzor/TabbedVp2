@@ -5,17 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    lateinit var viewPager: ViewPager2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initViewPager2WithFragments()
+        button.setOnClickListener { viewPager.setCurrentItem(10, true) }
     }
 
     private fun initViewPager2WithFragments() {
-        val viewPager: ViewPager2 = findViewById(R.id.viewpager)
+        viewPager = findViewById(R.id.viewpager)
         val adapter = ExampleStateAdapter(supportFragmentManager, lifecycle)
         viewPager.adapter = adapter
 
