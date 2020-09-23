@@ -7,10 +7,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ExampleStateAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
-FragmentStateAdapter(fragmentManager, lifecycle) {
+    FragmentStateAdapter(fragmentManager, lifecycle) {
 
     override fun getItemCount(): Int {
-        return 14
+        return 21
     }
 
     override fun createFragment(position: Int): Fragment {
@@ -30,6 +30,13 @@ FragmentStateAdapter(fragmentManager, lifecycle) {
             11 -> SomeFragment.newInstance("L")
             12 -> SomeFragment.newInstance("M")
             13 -> SomeFragment.newInstance("N")
+            14 -> SomeFragment.newInstance("O")
+            15 -> SomeFragment.newInstance("P")
+            16 -> SomeFragment.newInstance("Q")
+            17 -> SomeFragment.newInstance("R")
+            18 -> SomeFragment.newInstance("S")
+            19 -> SomeFragment.newInstance("T")
+            20 -> SomeFragment.newInstance("U")
             else -> SomeFragment.newInstance("0")
         }
     }

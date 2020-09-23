@@ -8,7 +8,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var viewPager: ViewPager2
+    private lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,20 +25,27 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout: TabLayout = findViewById(R.id.tablayout)
         val names: Array<String> = arrayOf(
-                "Fragment A",
-                "Fragment B",
-                "Fragment C",
-                "Fragment D",
-                "Fragment E",
-                "Fragment F",
-                "Fragment G",
-                "Fragment H",
-                "Fragment I",
-                "Fragment J",
-                "Fragment K",
-                "Fragment L",
-                "Fragment M",
-                "Fragment N"
+            "Fragment A",
+            "Fragment B",
+            "Fragment C",
+            "Fragment D",
+            "Fragment E",
+            "Fragment F",
+            "Fragment G",
+            "Fragment H",
+            "Fragment I",
+            "Fragment J",
+            "Fragment K",
+            "Fragment L",
+            "Fragment M",
+            "Fragment N",
+            "Fragment O",
+            "Fragment P",
+            "Fragment Q",
+            "Fragment R",
+            "Fragment S",
+            "Fragment T",
+            "Fragment U",
         )
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = names[position]
